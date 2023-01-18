@@ -18,19 +18,53 @@
 size_t	ft_strlen(const char *s)
 {
 	size_t i;
-	char *str;
-	long long int quadword;	
-	long long int *quadword_p;
+	const char *str;
+	unsigned long long int quadword;	
+	unsigned long long int *quadword_p;
 
 	i = 0;
-	quadword_p = (long long int*)s;
+	quadword_p = (unsigned long long int*)s;
 	quadword = *quadword_p;
+
+	for (str = s; 
+		((unsigned long long int)(str) & (sizeof(quadword) - 1)) != 0;
+		str++)
+	{
+		printf("X\n");
+		if (*str == 0)
+			return (str - s);
+	}
+
 	while (!((quadword - QUADMASK01) & ~quadword & QUADMASK80))
 	{
 		quadword_p++;
 		quadword = *quadword_p;
 	}
-	str = (char*)quadword_p;
+	str = (const char*)quadword_p;
+	
+	if ((((int)quadword - QUADMASK01) & ~(int)quadword & QUADMASK80))
+	{
+		int *int_p = (int*)quadword_p;
+		int_p++;
+		quadword_p = (unsigned long long int*)int_p;
+		quadword = *quadword_p;
+	}	
+	if ((((short)quadword - QUADMASK01) & ~(short)quadword & QUADMASK80))
+	{
+		short *int_p = (short*)quadword_p;
+		int_p++;
+		quadword_p = (unsigned long long int*)int_p;
+		quadword = *quadword_p;
+	}
+	if ((((char)quadword - QUADMASK01) & ~(char)quadword & QUADMASK80))
+	{
+		char *int_p = (char*)quadword_p;
+		int_p++;
+		quadword_p = (unsigned long long int*)int_p;
+		quadword = *quadword_p;
+	}
+	printf("[%lu]\n", (char*)quadword_p - s);
+
 	while (str[i] != 0)
 		i++;
 	return (str - s + i);
