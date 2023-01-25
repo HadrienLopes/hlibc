@@ -53,6 +53,8 @@ typedef struct    s_parameters
     int        ismaj;
 }                t_parameters;
 
+void ft_tabdeli(char **tab, unsigned int i);
+
 void			*ft_memset(void *str, int c, size_t n);
 void			ft_bzero(void *s, size_t nbyte);
 void			*ft_memcpy(void *dest, const void *src, size_t n);

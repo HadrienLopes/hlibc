@@ -30,7 +30,6 @@ size_t	ft_strlen(const char *s)
 		((unsigned long long int)(str) & (sizeof(quadword) - 1)) != 0;
 		str++)
 	{
-		printf("X\n");
 		if (*str == 0)
 			return (str - s);
 	}
@@ -63,8 +62,6 @@ size_t	ft_strlen(const char *s)
 		quadword_p = (unsigned long long int*)int_p;
 		quadword = *quadword_p;
 	}
-	printf("[%lu]\n", (char*)quadword_p - s);
-
 	while (str[i] != 0)
 		i++;
 	return (str - s + i);
