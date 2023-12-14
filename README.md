@@ -11,7 +11,7 @@ The project is organized into separate sections, each corresponding to a specifi
 There is a dedicated test directory for each library containing test cases.
 
 ## :book: Wiki
-For each library within this project, you can find additional documentation in the Wiki section. The Wiki provides detailed information, usage examples, and any specific considerations for each library.
+For each library within this project, you can find additional documentation in the Wiki section. The [wiki](../../wiki) provides detailed information, usage examples, and any specific considerations for each library.
 
 ## How to compile
 ```fish
