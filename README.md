@@ -8,10 +8,10 @@ The main goal of this project is to provide a comprehensive C standard library t
 
 ## Project Structure
 The project is organized into separate sections, each corresponding to a specific part of the standard, such as "stdio", "stdlib", "string", etc...  
-There is a dedicated test directory for each library containing test cases.
+There is a dedicated test directory containing test cases for each library.
 
 ## :book: Wiki
-For each library within this project, you can find additional documentation in the Wiki section. The [wiki](../../wiki) provides detailed information, usage examples, and any specific considerations for each library.
+For each library within this project, you can find additional documentation in the Wiki section. The [wiki](../../wiki) provides detailed information, usage examples, and any specific considerations.
 
 ## How to compile
 ```fish
@@ -26,13 +26,13 @@ Clone and compile the library on your project, and add the static library.
 ```fish
 $> gcc main.c -L ./lhc
 ```
-> [!NOTE]
+> [!IMPORTANT]
 > The library is only available in static version for the moment.
 
 ## List of all libraries implementated
 > [!NOTE]
-> - :white_check_mark: - The library is fully implemented.
-> - :construction: - The library is under construction.
+> - :white_check_mark: - Fully implemented library.
+> - :construction: - Under construction library.
 
 <details>
 <summary>ctype.h</summary>
