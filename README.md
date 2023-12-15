@@ -24,7 +24,7 @@ $> make
 Clone and compile the library on your project, and add the static library.
 
 ```fish
-$> gcc main.c -L ./lhc
+$> gcc main.c -L ./hlibc
 ```
 > [!IMPORTANT]
 > The library is only available in static version for the moment.
