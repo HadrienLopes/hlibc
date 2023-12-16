@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   h_isalnum.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hmoulher <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 11:10:43 by hmoulher          #+#    #+#             */
-/*   Updated: 2018/11/14 11:39:20 by hmoulher         ###   ########.fr       */
+/*   Created: 2023/12/16 11:26:13 by hadrien           #+#    #+#             */
+/*   Updated: 2023/12/16 11:26:13 by hadrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "h_ctype.h"
 
-void	*ft_memalloc(size_t size)
+int	h_isalnum(int c)
 {
-	void	*ptr;
-
-	if (!(ptr = malloc(size)))
-		return (0);
-	ft_bzero(ptr, size);
-	return (ptr);
+	return (h_isdigit(c) || h_isalpha(c) ? 1 : 0);
 }

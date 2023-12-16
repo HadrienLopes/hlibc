@@ -1,19 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   h_tolower.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hmoulher <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 11:26:55 by hmoulher          #+#    #+#             */
-/*   Updated: 2018/11/14 11:27:05 by hmoulher         ###   ########.fr       */
+/*   Created: 2023/12/16 11:26:13 by hadrien           #+#    #+#             */
+/*   Updated: 2023/12/16 11:26:13 by hadrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_lstadd(t_list **alst, t_list *new)
+int	h_tolower(int c)
 {
-	new->next = *alst;
-	*alst = new;
+	return (c | 0x20);
 }

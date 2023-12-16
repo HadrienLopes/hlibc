@@ -1,27 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   h_isprint.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hmoulher <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/23 04:42:21 by hmoulher          #+#    #+#             */
-/*   Updated: 2018/11/23 04:42:24 by hmoulher         ###   ########.fr       */
+/*   Created: 2023/12/16 11:26:13 by hadrien           #+#    #+#             */
+/*   Updated: 2023/12/16 11:26:13 by hadrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+int	h_isprint(int c)
 {
-	t_list	*out;
-
-	out = lst;
-	if (lst)
-	{
-		out = f(lst);
-		out->next = ft_lstmap(lst->next, f);
-		return (out);
-	}
-	return (NULL);
+	return ((c >= 32 && c <= 126) ? 1 : 0);
 }

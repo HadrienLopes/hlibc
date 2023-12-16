@@ -1,24 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   h_toupper.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hmoulher <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 10:36:17 by hmoulher          #+#    #+#             */
-/*   Updated: 2018/11/14 10:57:08 by hmoulher         ###   ########.fr       */
+/*   Created: 2023/12/16 11:26:13 by hadrien           #+#    #+#             */
+/*   Updated: 2023/12/16 11:26:13 by hadrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strcpy(char *dest, const char *src)
+int	h_toupper(int c)
 {
-	int i;
-
-	i = -1;
-	while (src[++i])
-		dest[i] = src[i];
-	dest[i] = '\0';
-	return (dest);
+	return (c & 0xDF);
 }
