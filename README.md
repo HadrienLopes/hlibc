@@ -25,7 +25,7 @@ $> make
 
 ## How to use
 To use hlibc functions:  
-After compiling the library, the makefile creates an **include** directory.  
+After compiling the library.  
 Add the static library (**libhlic.a**) and the **include** directory to your project, and use the following command:
 
 ```fish
@@ -75,5 +75,41 @@ int printf(const char * restrict format, ...);
 
 <details>
 <summary>string 🚧</summary>
+
+```c++
+char	*h_strcat(char * restrict s1, const char * restrict s2);
+```
+
+```c++
+int  h_strcmp(const char *s1, const char *s2);
+```
+
+```c++
+char	*h_strcpy(char * restrict s1, const char * restrict s2);
+```
+
+```c++
+char	*h_strdup(const char *s);
+```
+
+```c++
+size_t	h_strlen(const char *s);
+```
+
+```c++
+char	*h_strncat(char * restrict s1, const char * restrict s2, size_t n);
+```
+
+```c++
+char	*h_strncpy(char * restrict s1, const char * restrict s2, size_t n);
+```
+
+```c++
+char	*h_strndup(const char *s, size_t size);
+```
+
+```c++
+char	*h_strstr(char *s1, const char *s2);
+```
 
 </details>
