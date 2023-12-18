@@ -72,3 +72,8 @@ int toupper(int c);
 int printf(const char * restrict format, ...);
 ```
 </details>
+
+<details>
+<summary>string 🚧</summary>
+
+</details>
