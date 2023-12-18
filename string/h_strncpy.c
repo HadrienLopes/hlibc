@@ -10,13 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <h_string.h>
+#include <stddef.h>
+
 char	*h_strncpy(char *dest, const char *src, size_t n)
 {
 	size_t i;
 	size_t src_len;
 
 	i = 0;
-	src_len = ft_strlen(src);
+	src_len = h_strlen(src);
 	while (i < n)
 	{
 		if (i < src_len)

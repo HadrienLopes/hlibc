@@ -5,23 +5,25 @@
 #                                                    +:+ +:+         +:+     #
 #   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        #
 #                                                +#+#+#+#+#+   +#+           #
-#   Created: 2023/12/18 20:13:13 by hadrien           #+#    #+#             #
-#   Updated: 2023/12/18 20:23:37 by hadrien          ###   ########.fr       #
+#   Created: 2023/12/18 20:12:59 by hadrien           #+#    #+#             #
+#   Updated: 2023/12/18 20:15:28 by hadrien          ###   ########.fr       #
 #                                                                            #
 # ************************************************************************** #
 
-#Sub-makefile for the ctype library of the hlibc
+#Sub-makefile for the string library of the hlibc
 
 CFLAGS += -I ../include/
 
-DIR = ctype
-SRC = h_isalnum.c \
-	h_isalpha.c \
-	h_isascii.c \
-	h_isdigit.c \
-	h_isprint.c \
-	h_tolower.c \
-	h_toupper.c
+DIR = string
+SRC = h_strcat.c \
+	h_strcmp.c \
+	h_strcpy.c \
+	h_strdup.c \
+	h_strlen.c \
+	h_strncat.c \
+	h_strncpy.c \
+	h_strndup.c \
+	h_strstr.c
 OBJ = $(SRC:.c=.o)
 
 all: $(OBJ)

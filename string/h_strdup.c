@@ -10,13 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <h_string.h>
+#include <stdlib.h>
+#include <stddef.h>
+
 char	*h_strdup(const char *s)
 {
 	int		i;
 	char	*str;
 
 	i = -1;
-	if (!(str = (char*)malloc(sizeof(char) * ft_strlen(s) + 1)))
+	if (!(str = (char*)malloc(sizeof(char) * h_strlen(s) + 1)))
 		return (NULL);
 	while (s[++i])
 		str[i] = s[i];

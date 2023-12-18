@@ -10,15 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*h_strcat(char *dest, const char *src)
+#include <h_string.h>
+
+char	*h_strcat(char * restrict s1, const char * restrict s2)
 {
 	int i;
-	int dest_len;
+	int s1_len;
 
 	i = -1;
-	dest_len = ft_strlen(dest);
-	while (src[++i])
-		dest[dest_len + i] = src[i];
-	dest[dest_len + i] = '\0';
-	return (dest);
+	s1_len = h_strlen(s1);
+	while (s2[++i])
+		s1[s1_len + i] = s2[i];
+	s1[s1_len + i] = '\0';
+	return (s1);
 }

@@ -10,7 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*h_strstr(const char *haystack, const char *needle)
+#include <h_string.h>
+#include <stddef.h>
+
+char	*h_strstr(char *haystack, const char *needle)
 {
 	size_t i;
 	size_t j;
@@ -20,7 +23,7 @@ char	*h_strstr(const char *haystack, const char *needle)
 	i = 0;
 	j = 0;
 	k = 0;
-	needle_len = ft_strlen(needle);
+	needle_len = h_strlen(needle);
 	if (!(needle_len))
 		return ((char*)haystack);
 	while (haystack[i])

@@ -10,13 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <h_string.h>
+#include <stddef.h>
+
 char	*h_strncat(char *dest, const char *src, size_t n)
 {
 	int i;
 	int dest_len;
 
 	i = -1;
-	dest_len = ft_strlen(dest);
+	dest_len = h_strlen(dest);
 	while (src[++i] && n--)
 		dest[dest_len + i] = src[i];
 	dest[dest_len + i] = '\0';

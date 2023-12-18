@@ -6,11 +6,11 @@
 /*   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:26:13 by hadrien           #+#    #+#             */
-/*   Updated: 2023/12/16 11:26:13 by hadrien          ###   ########.fr       */
+/*   Updated: 2023/12/18 19:55:59 by hadrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "h_ctype.h"
+#include <h_ctype.h>
 
 int	h_isalnum(int c)
 {
