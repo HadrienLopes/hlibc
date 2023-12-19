@@ -81,7 +81,7 @@ char	*h_strcat(char * restrict s1, const char * restrict s2);
 ```
 
 ```c++
-int  h_strcmp(const char *s1, const char *s2);
+int     h_strcmp(const char *s1, const char *s2);
 ```
 
 ```c++
@@ -112,4 +112,23 @@ char	*h_strndup(const char *s, size_t size);
 char	*h_strstr(char *s1, const char *s2);
 ```
 
+```c++
+void	*h_memccpy(void *dest, const void *src, int c, size_t n);
+```
+
+```c++
+void	*h_memchr(const void *s, int c, size_t n);
+```
+
+```c++
+int    h_memcmp(const void *s1, const void *s2, size_t n);
+```
+
+```c++
+void	*h_memcpy(void *dest, const void *src, size_t n);
+```
+
+```c++
+void	*h_memmove(void *dest, const void *src, size_t n);
+```
 </details>
