@@ -23,7 +23,12 @@ SRC = h_strcat.c \
 	h_strncat.c \
 	h_strncpy.c \
 	h_strndup.c \
-	h_strstr.c
+	h_strstr.c \
+	h_memccpy.c \
+	h_memchr.c \
+	h_memcmp.c \
+	h_memcpy.c \
+	h_memmove.c
 OBJ = $(SRC:.c=.o)
 
 all: $(OBJ)

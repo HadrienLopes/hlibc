@@ -30,6 +30,11 @@ char	*h_strncat(char * restrict s1, const char * restrict s2, size_t n);
 char	*h_strncpy(char * restrict s1, const char * restrict s2, size_t n);
 char	*h_strndup(const char *s, size_t size);
 char	*h_strstr(char *s1, const char *s2);
-void	*h_memset(void *s, int c, size_t n); //WIP
+
+void	*h_memccpy(void *dest, const void *src, int c, size_t n);
+void	*h_memchr(const void *s, int c, size_t n);
+int		h_memcmp(const void *s1, const void *s2, size_t n);
+void	*h_memcpy(void *dest, const void *src, size_t n);
+void	*h_memmove(void *dest, const void *src, size_t n);
 
 #endif /* H_STRING_H_ */ 
