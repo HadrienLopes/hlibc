@@ -34,6 +34,11 @@ $> gcc main.c -I ./include -L ./hlibc
 > [!IMPORTANT]
 > The library is only available in static version for the moment.
 
+To run the test do:
+```fish
+$> make check
+```
+
 ## List of all libraries implementated
 > [!NOTE]
 > - :white_check_mark: - Fully implemented library.
