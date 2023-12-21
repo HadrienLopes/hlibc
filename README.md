@@ -136,4 +136,8 @@ void	*h_memcpy(void *dest, const void *src, size_t n);
 ```c++
 void	*h_memmove(void *dest, const void *src, size_t n);
 ```
+
+```c++
+void  *h_memset(void *s, int c, size_t n);
+```
 </details>
