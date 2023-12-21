@@ -6,7 +6,7 @@
 /*   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 21:18:01 by hadrien           #+#    #+#             */
-/*   Updated: 2023/12/17 21:18:01 by hadrien          ###   ########.fr       */
+/*   Updated: 2023/12/21 19:26:50 by hadrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ void	*h_memchr(const void *s, int c, size_t n);
 int		h_memcmp(const void *s1, const void *s2, size_t n);
 void	*h_memcpy(void *dest, const void *src, size_t n);
 void	*h_memmove(void *dest, const void *src, size_t n);
+void	*memset(void *s, int c, size_t n);
 
 #endif /* H_STRING_H_ */ 

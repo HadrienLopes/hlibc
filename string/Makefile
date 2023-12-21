@@ -6,7 +6,7 @@
 #   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        #
 #                                                +#+#+#+#+#+   +#+           #
 #   Created: 2023/12/18 20:12:59 by hadrien           #+#    #+#             #
-#   Updated: 2023/12/18 20:15:28 by hadrien          ###   ########.fr       #
+#   Updated: 2023/12/21 19:26:30 by hadrien          ###   ########.fr       #
 #                                                                            #
 # ************************************************************************** #
 
@@ -28,7 +28,8 @@ SRC = h_strcat.c \
 	h_memchr.c \
 	h_memcmp.c \
 	h_memcpy.c \
-	h_memmove.c
+	h_memmove.c \
+	h_memset.c
 OBJ = $(SRC:.c=.o)
 
 all: $(OBJ)
