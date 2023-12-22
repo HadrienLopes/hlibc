@@ -5,40 +5,23 @@
 #                                                    +:+ +:+         +:+     #
 #   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        #
 #                                                +#+#+#+#+#+   +#+           #
-#   Created: 2023/12/18 19:54:01 by hadrien           #+#    #+#             #
-#   Updated: 2023/12/22 22:34:49 by hadrien          ###   ########.fr       #
+#   Created: 2023/12/22 22:34:22 by hadrien           #+#    #+#             #
+#   Updated: 2023/12/22 22:35:51 by hadrien          ###   ########.fr       #
 #                                                                            #
 # ************************************************************************** #
 
-#Master Makefile for the hlibc
+#Sub-makefile for the stdlib library of the hlibc
 
-export CC = gcc
-export CFLAGS = -Wall -Wextra -Werror
-export INC = include
-export TEMP_FILE = obj_files.tmp
-LIB = libhlibc.a
-SECTION = ctype \
-	string \
-	stdlib
+CFLAGS += -I ../include/
 
-all: $(LIB)
-	rm -f $(TEMP_FILE)
+DIR = stdlib
+SRC = h_atoi.c
+OBJ = $(SRC:.c=.o)
 
-
-$(LIB): $(SECTION)
-	ar rcs $@ $(shell cat $(TEMP_FILE))
-
-$(SECTION):
-	$(MAKE) -C $@
-	cat $@/$(TEMP_FILE) >> $(TEMP_FILE)
+all: $(OBJ)
+	echo $(addprefix $(DIR)/,$(OBJ)) > $(TEMP_FILE)
 
 clean:
-	$(foreach dir, $(SECTION), $(MAKE) -C $(dir) clean;)
-	rm -f $(TEMP_FILE)
+	rm -f $(OBJ) $(TEMP_FILE) $(TEST)
 
-fclean: clean
-	rm -rf $(LIB)
-
-re: fclean all
-
-.PHONY: all $(LIB) $(SECTION) clean fclean re
+re: clean all
