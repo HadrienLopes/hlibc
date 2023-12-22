@@ -48,25 +48,34 @@ $> make check
 <summary>ctype 🚧</summary>
 
 ```c++
-int isalnum(int c);
+int h_isalnum(int c);
 ```
 ```c++
-int isalpha(int c);
+int h_isalpha(int c);
 ```
 ```c++
-int isascii(int c);
+int h_isascii(int c);
 ```
 ```c++
-int isdigit(int c);
+int h_isdigit(int c);
 ```
 ```c++
-int isprint(int c);
+int h_isprint(int c);
 ```
 ```c++
-int tolower(int c);
+int h_tolower(int c);
 ```
 ```c++
-int toupper(int c);
+int h_toupper(int c);
+```
+</details>
+
+
+<details>
+<summary>stdlib 🚧</summary>
+
+```c++
+int  h_atoi(const char *nptr);
 ```
 </details>
 
@@ -74,7 +83,7 @@ int toupper(int c);
 <summary>stdio 🚧</summary>
 
 ```c++
-int printf(const char * restrict format, ...);
+int h_printf(const char * restrict format, ...);
 ```
 </details>
 
