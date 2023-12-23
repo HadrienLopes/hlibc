@@ -127,6 +127,11 @@ char	*h_strstr(char *s1, const char *s2);
 ```
 
 ```c++
+char	*h_strchr(char *s, int c);
+```
+
+
+```c++
 void	*h_memccpy(void *dest, const void *src, int c, size_t n);
 ```
 
