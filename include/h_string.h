@@ -6,7 +6,7 @@
 /*   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 21:18:01 by hadrien           #+#    #+#             */
-/*   Updated: 2023/12/21 19:31:52 by hadrien          ###   ########.fr       */
+/*   Updated: 2023/12/23 21:06:16 by hadrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ char	*h_strncat(char * restrict s1, const char * restrict s2, size_t n);
 char	*h_strncpy(char * restrict s1, const char * restrict s2, size_t n);
 char	*h_strndup(const char *s, size_t size);
 char	*h_strstr(char *s1, const char *s2);
+char	*h_strchr(char *s, int c);
 
 void	*h_memccpy(void *dest, const void *src, int c, size_t n);
 void	*h_memchr(const void *s, int c, size_t n);
