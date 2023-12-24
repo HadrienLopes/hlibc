@@ -6,11 +6,12 @@
 /*   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:26:13 by hadrien           #+#    #+#             */
-/*   Updated: 2023/12/16 11:26:13 by hadrien          ###   ########.fr       */
+/*   Updated: 2023/12/24 18:48:40 by hadrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	h_tolower(int c)
 {
-	return (c | 0x20);
+	return ((ISFUNC((unsigned char)c, ISLOWER(c))) ?
+		(unsigned char)c | 0x20 : c);
 }

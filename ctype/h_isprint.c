@@ -6,11 +6,13 @@
 /*   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:26:13 by hadrien           #+#    #+#             */
-/*   Updated: 2023/12/16 11:26:13 by hadrien          ###   ########.fr       */
+/*   Updated: 2023/12/24 17:57:43 by hadrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <h_ctype.h>
+
 int	h_isprint(int c)
 {
-	return ((c >= 32 && c <= 126) ? 1 : 0);
+	return (ISFUNC((unsigned char)c, ISPRINT));
 }

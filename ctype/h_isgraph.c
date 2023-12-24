@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   h_isascii.c                                        :+:      :+:    :+:   */
+/*   h_isgraph.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 11:26:13 by hadrien           #+#    #+#             */
-/*   Updated: 2023/12/16 11:26:13 by hadrien          ###   ########.fr       */
+/*   Created: 2023/12/24 17:49:30 by hadrien           #+#    #+#             */
+/*   Updated: 2023/12/24 17:57:14 by hadrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	h_isascii(int c)
+#include <h_ctype.h>
+
+int	h_isgraph(int c)
 {
-	return ((c >= 0 && c <= 127) ? 1 : 0);
+	return (ISFUNC((unsigned char)c, ISGRAPH));
 }

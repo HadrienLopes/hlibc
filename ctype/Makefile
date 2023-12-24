@@ -6,7 +6,7 @@
 #   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        #
 #                                                +#+#+#+#+#+   +#+           #
 #   Created: 2023/12/18 20:13:13 by hadrien           #+#    #+#             #
-#   Updated: 2023/12/20 18:34:46 by hadrien          ###   ########.fr       #
+#   Updated: 2023/12/24 18:01:34 by hadrien          ###   ########.fr       #
 #                                                                            #
 # ************************************************************************** #
 
@@ -19,11 +19,19 @@ TEST_DIR = ./test
 TEST_SRC = tst-ctype.c
 
 DIR = ctype
-SRC = h_isalnum.c \
+SRC = h_ctype_table.c \
+	h_isalnum.c \
 	h_isalpha.c \
-	h_isascii.c \
+	h_isblank.c \
+	h_iscntrl.c \
 	h_isdigit.c \
+	h_isgraph.c \
+	h_islower.c \
 	h_isprint.c \
+	h_ispunct.c \
+	h_isspace.c \
+	h_isupper.c \
+	h_isxdigit.c \
 	h_tolower.c \
 	h_toupper.c
 OBJ = $(SRC:.c=.o)

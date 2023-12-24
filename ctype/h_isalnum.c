@@ -6,7 +6,7 @@
 /*   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:26:13 by hadrien           #+#    #+#             */
-/*   Updated: 2023/12/18 19:55:59 by hadrien          ###   ########.fr       */
+/*   Updated: 2023/12/24 16:35:02 by hadrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	h_isalnum(int c)
 {
-	return (h_isdigit(c) || h_isalpha(c) ? 1 : 0);
+	return (ISFUNC((unsigned char)c, ISALNUM));
 }
