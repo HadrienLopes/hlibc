@@ -45,7 +45,7 @@ $> make check
 > - :construction: - Under construction library.
 
 <details>
-<summary>ctype 🚧</summary>
+<summary>ctype :white_check_mark:</summary>
 
 ```c++
 int h_isalnum(int c);
@@ -54,13 +54,34 @@ int h_isalnum(int c);
 int h_isalpha(int c);
 ```
 ```c++
-int h_isascii(int c);
+int h_isblank(int c);
+```
+```c++
+int h_iscntrl(int c);
 ```
 ```c++
 int h_isdigit(int c);
 ```
 ```c++
+int h_isgraph(int c);
+```
+```c++
+int h_islower(int c);
+```
+```c++
 int h_isprint(int c);
+```
+```c++
+int h_ispunct(int c);
+```
+```c++
+int h_isspace(int c);
+```
+```c++
+int h_isupper(int c);
+```
+```c++
+int h_isxdigit(int c);
 ```
 ```c++
 int h_tolower(int c);
@@ -72,7 +93,7 @@ int h_toupper(int c);
 
 
 <details>
-<summary>stdlib 🚧</summary>
+<summary>stdlib :construction:</summary>
 
 ```c++
 int  h_atoi(const char *nptr);
@@ -80,7 +101,7 @@ int  h_atoi(const char *nptr);
 </details>
 
 <details>
-<summary>stdio 🚧</summary>
+<summary>stdio :construction:</summary>
 
 ```c++
 int h_printf(const char * restrict format, ...);
@@ -88,7 +109,7 @@ int h_printf(const char * restrict format, ...);
 </details>
 
 <details>
-<summary>string 🚧</summary>
+<summary>string :construction:</summary>
 
 ```c++
 char	*h_strcat(char * restrict s1, const char * restrict s2);
