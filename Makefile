@@ -5,40 +5,59 @@
 #                                                    +:+ +:+         +:+     #
 #   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        #
 #                                                +#+#+#+#+#+   +#+           #
-#   Created: 2023/12/18 19:54:01 by hadrien           #+#    #+#             #
-#   Updated: 2023/12/22 22:34:49 by hadrien          ###   ########.fr       #
+#   Created: 2023/12/27 19:40:34 by hadrien           #+#    #+#             #
+#   Updated: 2023/12/27 19:49:34 by hadrien          ###   ########.fr       #
 #                                                                            #
 # ************************************************************************** #
 
-#Master Makefile for the hlibc
+NAME = libft.a
+SRCS =	ft_memset.c \
+CC = gcc -Wall -Wextra -Werror
+CFLAGS = -I .libft.h
+SRCS = h_atoi.c \
+	h_ctype_table.c \
+	h_isalnum.c \
+	h_isalpha.c \
+	h_isblank.c \
+	h_iscntrl.c \
+	h_isdigit.c \
+	h_isgraph.c \
+	h_islower.c \
+	h_isprint.c \
+	h_ispunct.c \
+	h_isspace.c \
+	h_isupper.c \
+	h_isxdigit.c \
+	h_memccpy.c \
+	h_memchr.c \
+	h_memcmp.c \
+	h_memcpy.c \
+	h_memmove.c \
+	h_memset.c \
+	h_strcat.c \
+	h_strchr.c \
+	h_strcmp.c \
+	h_strcpy.c \
+	h_strdup.c \
+	h_strlen.c \
+	h_strncat.c \
+	h_strncpy.c \
+	h_strndup.c \
+	h_strstr.c \
+	h_tolower.c \
+	h_toupper.c 
+OBJ = $(SRCS:.c=.o)
+all: $(NAME)
 
-export CC = gcc
-export CFLAGS = -Wall -Wextra -Werror
-export INC = include
-export TEMP_FILE = obj_files.tmp
-LIB = libhlibc.a
-SECTION = ctype \
-	string \
-	stdlib
-
-all: $(LIB)
-	rm -f $(TEMP_FILE)
-
-
-$(LIB): $(SECTION)
-	ar rcs $@ $(shell cat $(TEMP_FILE))
-
-$(SECTION):
-	$(MAKE) -C $@
-	cat $@/$(TEMP_FILE) >> $(TEMP_FILE)
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 clean:
-	$(foreach dir, $(SECTION), $(MAKE) -C $(dir) clean;)
-	rm -f $(TEMP_FILE)
+	rm -f $(OBJ)
 
 fclean: clean
-	rm -rf $(LIB)
+	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all $(LIB) $(SECTION) clean fclean re
+.PHONY: all clean fclean re
