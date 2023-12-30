@@ -6,7 +6,7 @@
 #   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        #
 #                                                +#+#+#+#+#+   +#+           #
 #   Created: 2023/12/18 19:54:01 by hadrien           #+#    #+#             #
-#   Updated: 2023/12/22 22:34:49 by hadrien          ###   ########.fr       #
+#   Updated: 2023/12/30 21:50:54 by hadrien          ###   ########.fr       #
 #                                                                            #
 # ************************************************************************** #
 
@@ -31,6 +31,9 @@ $(LIB): $(SECTION)
 $(SECTION):
 	$(MAKE) -C $@
 	cat $@/$(TEMP_FILE) >> $(TEMP_FILE)
+
+check:
+	$(foreach dir, $(SECTION), $(MAKE) -C $(dir) check;)
 
 clean:
 	$(foreach dir, $(SECTION), $(MAKE) -C $(dir) clean;)
