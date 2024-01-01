@@ -6,25 +6,11 @@
 /*   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 18:25:01 by hadrien           #+#    #+#             */
-/*   Updated: 2023/12/21 19:31:25 by hadrien          ###   ########.fr       */
+/*   Updated: 2024/01/01 14:23:37 by hadrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-#ifndef MEMSET
-# define MEMSET memset 
-#endif /* MEMSET */
-
-/* _ALIGN is used to align all function 
-   if alignment is only needed for memset use MEMSET_ALIGN*/
-#ifdef _ALIGN
-#define MEMSET_ALIGN
-#endif /* _ALIGN */
-
-#define OPSIZE 8
-
-typedef long long int op_t;
+#include <h_string.h>
 
 void	*h_memset(void *s, int c, size_t n)
 {
@@ -42,16 +28,6 @@ void	*h_memset(void *s, int c, size_t n)
 		xc |= (xc << 16);
 	}
 
-#ifdef MEMSET_ALIGN
-	//check alignement needed
-	while ((op_t)sp % 8)
-	{
-		*((byte*)sp) = (unsigned char)xc;
-		sp = (op_t*)(((char*)sp) + 1);
-		n--;
-	}
-#endif /* MEMSET_ALIGN */
-	
 	/* The compiler must optimize this operation with a 
 	   logical shift left operation */
 	i = n / OPSIZE;

@@ -6,7 +6,7 @@
 /*   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 21:18:01 by hadrien           #+#    #+#             */
-/*   Updated: 2023/12/23 21:06:16 by hadrien          ###   ########.fr       */
+/*   Updated: 2024/01/01 14:20:51 by hadrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 
 /* Biggest type possible for a single load/store instruction
 	eg: movq instruction */
-typedef	unsigned long long int	op_t;
-#define OPSIZE sizeof(op_t)
 
+typedef	unsigned long long int	op_t;
 typedef	unsigned long int	size_t;
 typedef	unsigned char		byte;
+
+# define OPSIZE	sizeof(op_t)
 
 char	*h_strcat(char * restrict s1, const char * restrict s2);
 int		h_strcmp(const char *s1, const char *s2);
