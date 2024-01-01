@@ -29,7 +29,7 @@ After compiling the library.
 Add the static library (**libhlic.a**) and the **include** directory to your project, and use the following command:
 
 ```fish
-$> gcc main.c -I ./include -L ./hlibc
+$> gcc main.c -I ./include -L ./ -l hlibc
 ```
 > [!IMPORTANT]
 > The library is only available in static version for the moment.
