@@ -6,7 +6,7 @@
 #   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        #
 #                                                +#+#+#+#+#+   +#+           #
 #   Created: 2023/12/18 19:54:01 by hadrien           #+#    #+#             #
-#   Updated: 2023/12/30 21:50:54 by hadrien          ###   ########.fr       #
+#   Updated: 2024/01/03 22:07:00 by hadrien          ###   ########.fr       #
 #                                                                            #
 # ************************************************************************** #
 
@@ -19,6 +19,7 @@ export TEMP_FILE = obj_files.tmp
 LIB = libhlibc.a
 SECTION = ctype \
 	string \
+	strings \
 	stdlib
 
 all: $(LIB)

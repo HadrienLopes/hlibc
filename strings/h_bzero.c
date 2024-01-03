@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   h_stdlib.h                                         :+:      :+:    :+:   */
+/*   h_bzero.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/22 22:32:20 by hadrien           #+#    #+#             */
-/*   Updated: 2024/01/03 22:14:18 by hadrien          ###   ########.fr       */
+/*   Created: 2024/01/03 22:04:17 by hadrien           #+#    #+#             */
+/*   Updated: 2024/01/03 22:11:44 by hadrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef H_STDLIB_H
-# define H_STDLIB_H
+#include <h_string.h>
 
-int	h_atoi(const char *nptr);
-
-#endif /* H_STDLIB_H  */
+void	h_bzero(void *s, size_t nbyte)
+{
+	h_memset(s, 0, nbyte);
+}

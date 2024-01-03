@@ -6,12 +6,12 @@
 /*   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 21:18:01 by hadrien           #+#    #+#             */
-/*   Updated: 2024/01/01 14:20:51 by hadrien          ###   ########.fr       */
+/*   Updated: 2024/01/03 22:14:53 by hadrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef H_STRING_H_
-# define H_STRING_H_
+#ifndef H_STRING_H
+# define H_STRING_H
 
 /* Biggest type possible for a single load/store instruction
 	eg: movq instruction */
@@ -40,4 +40,4 @@ void	*h_memcpy(void *dest, const void *src, size_t n);
 void	*h_memmove(void *dest, const void *src, size_t n);
 void	*h_memset(void *s, int c, size_t n);
 
-#endif /* H_STRING_H_ */ 
+#endif /* H_STRING_H */ 
