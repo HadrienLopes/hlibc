@@ -6,13 +6,13 @@
 /*   hadrien.moulherat@etudiant.univ-rennes1.fr     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 22:04:17 by hadrien           #+#    #+#             */
-/*   Updated: 2024/01/03 22:11:44 by hadrien          ###   ########.fr       */
+/*   Updated: 2024/01/03 22:17:56 by hadrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <h_string.h>
 
-void	h_bzero(void *s, size_t nbyte)
+void	h_bzero(void *s, size_t n)
 {
 	h_memset(s, 0, nbyte);
 }
